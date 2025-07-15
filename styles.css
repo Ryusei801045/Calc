@@ -1,0 +1,123 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+}
+
+#quiz-area, #score-area {
+    margin-top: 20px;
+}
+
+#question {
+    font-size: 1.5em;
+    margin-bottom: 25px;
+    color: #34495e;
+}
+
+#country-name {
+    font-weight: bold;
+    color: #e74c3c; /* 赤系で目立たせる */
+}
+
+#user-answer {
+    width: calc(100% - 20px);
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+#user-answer:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin: 5px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+#next-button {
+    background-color: #27ae60; /* 緑 */
+}
+
+#next-button:hover {
+    background-color: #229a53;
+}
+
+#restart-button {
+    background-color: #f39c12; /* オレンジ */
+}
+
+#restart-button:hover {
+    background-color: #e08e0b;
+}
+
+.hidden {
+    display: none;
+}
+
+.feedback-message {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.feedback-message.correct {
+    color: #27ae60; /* 緑 */
+}
+
+.feedback-message.incorrect {
+    color: #e74c3c; /* 赤 */
+}
+
+#score-area p {
+    font-size: 1.4em;
+    margin-bottom: 25px;
+}
+
+#score-area span {
+    font-weight: bold;
+    color: #2c3e50;
+}
