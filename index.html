@@ -1,1 +1,30 @@
 
+
+<html lang="ja">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ヨーロッパの首都クイズ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ヨーロッパの首都クイズ</h1>
+        <div id="quiz-area">
+            <p id="question">問題: <span id="country-name"></span> の首都は？</p>
+            <input type="text" id="user-answer" placeholder="ここに首都を入力">
+            <button id="submit-button">回答する</button>
+            <button id="next-button" class="hidden">次の問題</button>
+            <p id="feedback" class="feedback-message"></p>
+        </div>
+        <div id="score-area" class="hidden">
+            <h2>クイズ終了！</h2>
+            <p>正解数: <span id="correct-count">0</span> / <span id="total-questions">0</span></p>
+            <button id="restart-button">もう一度プレイする</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
