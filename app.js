@@ -4,9 +4,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const todoList = document.getElementById('todo-list');
 
     // PWA: Service Worker の登録
+    // GitHub Pages でリポジトリ名がパスに含まれる場合を考慮し、
+    // serviceWorker.register のパスを `/sw.js` にすることで、
+    // リポジトリのルート（例: https://<username>.github.io/<repository-name>/sw.js）
+    // をService Workerのスコープとして登録します。
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/sw.js')
+            navigator.serviceWorker.register('/sw.js', { scope: '/' }) // スコープをルートに設定
                 .then(registration => {
                     console.log('Service Worker 登録成功:', registration.scope);
                 })
