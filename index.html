@@ -3,54 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>電卓アプリ</title>
+    <title>ToDoリスト</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#333">
-
-    <link rel="apple-touch-icon" href="icons/icon-192.png">
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('sw.js').then(reg => {
-                    console.log('SW登録成功:', reg.scope);
-                }).catch(err => {
-                    console.error('SW登録失敗:', err);
-                });
-            });
-        }
-    </script>
 </head>
 <body>
-
-    <div class="calculator">
-        <div class="calculator-screen">0</div>
-        <div class="calculator-keys">
-            <button class="key--operator" data-action="add">+</button>
-            <button class="key--operator" data-action="subtract">-</button>
-            <button class="key--operator" data-action="multiply">&times;</button>
-            <button class="key--operator" data-action="divide">&divide;</button>
-
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-
-            <button>0</button>
-            <button data-action="decimal">.</button>
-            <button data-action="clear">AC</button>
-
-            <button class="key--equal" data-action="calculate">=</button>
+    <div class="container">
+        <h1>私のToDoリスト</h1>
+        <div class="input-section">
+            <input type="text" id="todo-input" placeholder="新しいToDoを追加">
+            <button id="add-button">追加</button>
         </div>
+        <ul id="todo-list">
+            </ul>
     </div>
-
-    <script src="app.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
