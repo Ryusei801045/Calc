@@ -5,7 +5,7 @@
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#3498db",
-  "orientation": "portrait",
+  "description": "ヨーロッパ各国の首都を当てるクイズゲームです。",
   "icons": [
     {
       "src": "icons/icon-192.png",
