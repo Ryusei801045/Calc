@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToDoリスト</title>
+    <title>PWA ToDoリスト</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="manifest" href="manifest.json">
-    <link rel="icon" href="icons/icon-192.png">
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="ToDo PWA">
     <meta name="theme-color" content="#007bff">
 </head>
 <body>
@@ -16,19 +19,9 @@
             <input type="text" id="todo-input" placeholder="新しいToDoを追加">
             <button id="add-button">追加</button>
         </div>
-        <ul id="todo-list"></ul>
+        <ul id="todo-list">
+        </ul>
     </div>
-
     <script src="app.js"></script>
-    <script>
-        // Service Worker登録
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('sw.js')
-                    .then(reg => console.log('SW登録成功:', reg.scope))
-                    .catch(err => console.error('SW登録失敗:', err));
-            });
-        }
-    </script>
 </body>
 </html>
