@@ -1,21 +1,20 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ヨーロッパの首都クイズ</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#3498db">
-    <link rel="icon" href="icons/icon-192.png" type="image/png">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" href="icons/icon-192.png" type="image/png" />
+    <meta name="theme-color" content="#3498db" />
 </head>
 <body>
     <div class="container">
         <h1>ヨーロッパの首都クイズ</h1>
         <div id="quiz-area">
             <p id="question">問題: <span id="country-name"></span> の首都は？</p>
-            <input type="text" id="user-answer" placeholder="ここに首都を入力">
+            <input type="text" id="user-answer" placeholder="ここに首都を入力" />
             <button id="submit-button">回答する</button>
             <button id="next-button" class="hidden">次の問題</button>
             <p id="feedback" class="feedback-message"></p>
@@ -31,7 +30,7 @@
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('sw.js')
-                    .then(reg => console.log('Service Worker registered', reg))
+                    .then(reg => console.log('Service Worker registered:', reg.scope))
                     .catch(err => console.error('Service Worker registration failed:', err));
             });
         }
