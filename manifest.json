@@ -3,6 +3,7 @@
     "short_name": "ToDo PWA",
     "description": "シンプルなプログレッシブ・ウェブ・アプリのToDoリスト",
     "start_url": "/",
+    "scope": "/",
     "display": "standalone",
     "background_color": "#f4f4f4",
     "theme_color": "#007bff",
